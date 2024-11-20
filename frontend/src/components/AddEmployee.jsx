@@ -43,7 +43,7 @@ const AddEmployee = () => {
     if (location.state != null) {
       axiosInstance
         .put(
-          `https://assignment-06-employeeapp-2.onrender.com/employee/edit/${location.state.val._id}`,
+          `http://localhost:3000/employee/edit/${location.state.val._id}`,
           form
         )
         .then((res) => {
@@ -54,7 +54,7 @@ const AddEmployee = () => {
         });
     } else {
       axiosInstance
-        .post(`https://assignment-06-employeeapp-2.onrender.com/employee/add`, form)
+        .post(`http://localhost:3000/employee/add`, form)
         .then((res) => {
           alert(res.data.message);
         })
