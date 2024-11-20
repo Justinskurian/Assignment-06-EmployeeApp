@@ -18,7 +18,7 @@ const EmployeeList = () => {
   const Navigate = useNavigate();
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:3000/employee")
+      .get("https://assignment-06-employeeapp-2.onrender.com/employee")
       .then((res) => {
         console.log(res);
         setEmployee(res.data);
@@ -33,7 +33,7 @@ const EmployeeList = () => {
   }
   const employeeDelete = (id) => {
     axiosInstance
-      .delete(`http://localhost:3000/employee/delete/${id}`)
+      .delete(`https://assignment-06-employeeapp-2.onrender.com/employee/delete/${id}`)
       .then((res) => {
         console.log(res.data);
         window.location.reload();

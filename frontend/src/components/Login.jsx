@@ -12,7 +12,7 @@ const Login = () => {
 
   function capValue() {
     axios
-      .post("http://localhost:3000/user/login", login)
+      .post("https://assignment-06-employeeapp-2.onrender.com/user/login", login)
       .then((res) => {
         alert(res.data.message);
         if (res.data.token) {

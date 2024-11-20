@@ -12,7 +12,7 @@ const Signup = () => {
   const addhandler = () => {
     console.log(user);
     axios
-      .post("http://localhost:3000/user/signup", user)
+      .post("https://assignment-06-employeeapp-2.onrender.com/user/signup", user)
       .then((res) => {
         alert(`${res.data.message}  Now login ` )
         navigate("/");
